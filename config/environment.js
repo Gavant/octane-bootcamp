@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'octane-bootcamp',
+    podModulePrefix: 'octane-bootcamp/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -24,10 +25,12 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    RESTAPI: null
   };
 
   if (environment === 'development') {
+      ENV.RESTAPI = 'http://wwwd-levrx.gavant.com:8080';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

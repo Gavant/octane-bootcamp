@@ -1,0 +1,29 @@
+{
+    "action": {
+        "add": "Add",
+        "back": "Back",
+        "cancel": "Cancel",
+        "finish": "Finish",
+        "next": "Next",
+        "remove": "Remove",
+        "save": "Save",
+        "search": "Search",
+        "select": "Select",
+        "selected": "Selected"
+    },
+    "page": {
+        "login": {
+            "email": "Email Address",
+            "password": "Password",
+            "login": "Login",
+            "welcome": "Welcome back",
+            "direction": "Login to your account",
+            "forgot": "Forgot Password?",
+            "sendEmail": "Send Email"
+        }
+
+    },
+    "tables": {
+        "noResults": "No Results"
+    }
+}

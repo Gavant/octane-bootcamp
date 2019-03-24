@@ -1,0 +1,42 @@
+<div class="splash-container row">
+    <div class="col-md-6 user-message">
+        <span class="splash-message text-right">
+            {{t "page.login.welcome"}}
+        </span>
+    </div>
+    <div class="col-md-6 form-message">
+        <img class="logo-img mb-4 img-fluid" src="/images/logo.png" alt={{t "page.login.logoAlt"}}>
+        <span class="splash-description text-center mt-5 mb-5">{{t "page.login.direction"}}</span>
+        <FormValidator
+            @class="login-form"
+            @changeset={{this.changeset}}
+            @submit={{action "authenticate"}}
+            as |changeset validator|
+        >
+            <InputValidator @target="emailAddress">
+                <FlInput @value={{changeset.emailAddress}} @placeholder={{t "page.login.email"}} />
+            </InputValidator>
+            <InputValidator @target="password">
+                <FlInput @value={{changeset.password}} @type="password" @placeholder={{t "page.login.password"}} />
+            </InputValidator>
+            <div class="form-group">
+                <ButtonSpinner
+                    @type="primary"
+                    @block={{true}}
+                    @label={{t "page.login.login"}}
+                    @action={{validator.submit}}
+                />
+            </div>
+            <div class="form-group row login-tools">
+                <div class="col-sm-12 pt-2 px-0 login-forgot-password">
+                    <Link-to @params={{array "password.forgot"}}>
+                        {{t "page.login.forgot"}}
+                    </Link-to>
+                </div>
+            </div>
+        </FormValidator>
+        {{!-- <div class="out-links">
+            <a href="#">{{t "footer.copyright" date=(current-year)}}</a>
+        </div> --}}
+    </div>
+</div>
