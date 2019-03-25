@@ -5,7 +5,16 @@ import { inject as service } from '@ember/service';
 import { computed } from '@ember/object';
 import { assign } from '@ember/polyfills';
 
-export default class Ajax extends AjaxService {
+export default class Ajax extends AjaxService.extend({
+    options() {
+        let options = this._super(...arguments) || {};
+        if (!options.xhrFields) {
+            options.xhrFields = {};
+        }
+        options.xhrFields.withCredentials = true;
+        return options;
+    }
+}) {
     @service session!: Session;
     host: any = ENV.RESTAPI;
 
@@ -25,15 +34,6 @@ export default class Ajax extends AjaxService {
             this.authorizationHeaders
         );
         return headers;
-    };
-
-    options() {
-        let options = this._super(...arguments);
-        if (!options.xhrFields) {
-            options.xhrFields = {};
-        }
-        options.xhrFields.withCredentials = true;
-        return options;
     };
 
     stringifyData(data: JSON) {

@@ -1,0 +1,17 @@
+.currency-mask {
+    position: relative;
+    &.inline-edit {
+        input {
+            border: none;
+            box-shadow: none !important;
+            border-radius: 0;
+            padding-right: 0;
+            height: 1rem;
+            position: relative;
+            justify-content: flex-end !important;
+            text-align: right;
+            font-size: .8rem;
+            text-decoration: underline dotted;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.admin.brokers {
+    $dashed-border-color: #DDD;
+    &.list-management {
+        li:last-child {
+            border-bottom: none !important;
+        }
+        li.drag-here {
+            background-color: $page-background-color;
+            min-height: 200px;
+            min-width: 200px;
+            background-image: linear-gradient(to right, $dashed-border-color 50%, transparent 50%),
+                              linear-gradient(to right, $dashed-border-color 50%, transparent 50%),
+                              linear-gradient(to bottom, $dashed-border-color 50%, transparent 50%),
+                              linear-gradient(to bottom, $dashed-border-color 50%, transparent 50%);
+            background-position: left top, left bottom, left top, right top;
+            background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+            background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+            color: #677683;
+            .instructions {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.modal-open.accounts-view {
+    .column-list {
+        height: 400px;
+        overflow-y: auto;
+        width: 100%;
+        li {
+            cursor: pointer;
+            &.selected {
+                background-color: $color-default;
+                color: #FFF;
+            }
+        }
+    }
+    .direction-selection {
+        width: 130px;
+    }
+}

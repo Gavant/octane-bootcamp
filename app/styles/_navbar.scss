@@ -1,0 +1,41 @@
+//Override template which is overriding bootstrap
+@include media-breakpoint-between(sm, md) {
+    .navbar-toggleable .navbar-nav {
+        .nav-item {
+            .nav-link {
+                padding-right: .5rem;
+                padding-left: .5rem;
+                font-size: 0.7rem;
+                border-top: 6px solid transparent;
+        	}
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .navbar-toggleable .navbar-nav {
+        .nav-item {
+            .nav-link {
+                padding-right: 1rem;
+                padding-left: 1rem;
+                font-size: .8rem;
+        	}
+        }
+    }
+}
+
+
+.navbar-spark {
+    .navbar-nav > .active > a,
+    .navbar-nav > .active > a:hover,
+    .navbar-nav > .active > a:focus {
+         color: $color-primary;
+         border-top: 6px solid $color-primary;
+    }
+}
+.nav.navbar-nav {
+    .dropdown-toggle {
+        outline: 0;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,158 @@
+//colors
+
+$white:    #fff;
+$gray-100: #f5f5f5;
+$gray-200: #e5e5e5;
+$gray-300: #999;
+$gray-400: #888;
+$gray-500: #777;
+$gray-600: #555;
+$gray-700: #444;
+$gray-800: #333;
+$gray-900: #151515;
+$black:    #000;
+
+$grays: ();
+$grays: map-merge((
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
+$blue:    #4C6169;
+$dark-blue: #203A45;
+$indigo:  #6610f2;
+$purple:  #4829B2;
+$pink:    #e83e8c;
+$red:     #dc3545;
+$orange:  #f17137;
+$yellow:  #ffbe00;
+$green:   #41D492;
+$teal:    #1d969d;
+$cyan:    #5C59ED;
+$transparent-white:  rgba($white, .2);
+$transparent-black:  rgba($black, .2);
+$color-money-positive: #85BB65;
+$color-money-negative: #D9463E;
+
+$colors: ();
+$colors: map-merge((
+  "blue":       $blue,
+  "dark-blue":  $dark-blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800,
+  "transparent-white": $transparent-white,
+  "transparent-black": $transparent-black,
+  "money-positive": $color-money-positive,
+  "money-negative": $color-money-negative
+), $colors);
+
+$primary: $yellow;
+$secondary: $dark-blue;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+
+$theme-colors: ();
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+), $theme-colors);
+
+//theme color variables
+$color-primary: $yellow;
+$color-default: $dark-blue;
+$color-success: $green;
+$color-info: $cyan;
+$color-warning: $yellow;
+$color-danger: $red;
+
+$color-twitter: #00aced;
+$color-facebook: #3b5998;
+$color-googleplus: #dd4b39;
+$color-pinterest: #cb2027;
+$color-linkedin: #007bb6;
+$color-github: #4078c0;
+$input-border-color: #CCC;
+
+$font-size-base: .9rem;
+
+$power-select-infinity-loading-color: $primary;
+$dropdown-animation-duration: .25s;
+$page-background-color: #EFEFEF;
+$text-muted-color: #818a91;
+
+$disabled-opacity: 0.5;
+
+$form-group-margin-bottom: 0.5rem;
+
+$input-validator-error-padding-top: 0;
+$input-validator-error-min-height: 1rem;
+
+//sidebar links
+$sidebar-link-background-color: $primary;
+$sidebar-link-color: $color-default;
+
+//progress bar
+$progress-bar-height: 6px;
+$progress-bar-duration: 3s;
+$progress-bar-delay: 1.5s;
+$progress-bar-color: $primary;
+//Page header
+$page-header-padding: 12px 0 50px;
+//links
+$link-color: $color-default;
+$link-hover-color: lighten($color-default, 20%);
+$nav-tabs-link-active-color: $primary;
+$nav-pills-link-active-color: $primary;
+
+//Custom Controls
+$custom-control-gutter: 2.23077rem !default;
+$custom-control-spacer-y: .923rem !default;
+$custom-control-indicator-size: 1.38462rem !default;
+$custom-control-indicator-bg: $white !default;
+$custom-control-indicator-border-color: $primary;
+$custom-control-indicator-focus-box-shadow: none !default;
+$custom-control-indicator-checked-color: $primary !default;
+$custom-control-indicator-checked-bg: $white !default;
+$custom-control-indicator-checked-disabled-bg: rgba($white, $disabled-opacity);
+$custom-control-indicator-checked-border-color: $primary;
+$custom-control-indicator-active-bg: $white !default;
+$input-check-component-size: 26px;
+
+//Notifications
+$notification-z-index: 1000000;
+
+//FL Inputs
+$floating-label-control-label-size: .9rem;
+
+$spacer: 1rem;
+$spacers: (
+  6: ($spacer * 5),
+  7: ($spacer * 10)
+)

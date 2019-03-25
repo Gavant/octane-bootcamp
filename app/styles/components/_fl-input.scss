@@ -1,0 +1,83 @@
+.floating-label {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    //Do not copy to other projects
+    &.inline-edit {
+        // $floating-label-control-focus-top: 0%;
+        &.has-focus,
+        &.has-content {
+            .control-label {
+                top: 0%;
+                left: 55%;
+            }
+            .ember-basic-dropdown-trigger,
+            select,
+            input {
+                padding-top: 0;
+                text-align: left;
+            }
+        }
+        .ember-basic-dropdown-trigger,
+        select,
+        input {
+            border: none;
+            box-shadow: none !important;
+            border-radius: 0;
+            width: 50%;
+            height: 1rem;
+            position: relative;
+            justify-content: flex-start !important;
+            text-decoration: underline dotted;
+        }
+        .ember-power-select-trigger {
+            input {
+                width: 100%;
+            }
+        }
+    }
+    //
+    .ember-basic-dropdown-trigger,
+    input,
+    select {
+        padding: .4em 12px;
+        height: 40px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    .ember-power-select-infinity-trigger {
+        padding: 0 !important;
+    }
+    //Account for the padding that we have from the floating label
+    .ember-power-select-selected-item,
+    .ember-power-select-placeholder {
+        margin-left: 0;
+        padding-top: .8em;
+        padding-bottom: 0em;
+    }
+
+    &.has-content,
+    &.has-focus {
+        .number-range-input,
+        .ember-power-select-trigger,
+        .ember-basic-dropdown-trigger,
+        input, select {
+            padding-top: .8em;
+            padding-bottom: 0em;
+        }
+        .control-label {
+            opacity: $floating-label-control-opacity;
+        }
+    }
+    .control-label {
+        background-color: #FFF;
+    }
+}
+
+
+.modal-dialog {
+    .floating-label {
+        overflow: inherit;
+    }
+}

@@ -1,0 +1,10 @@
+.login {
+    .page-brand {
+        background-color: $color-default;
+    }
+    .notification-container {
+        left: 50%;
+        right: initial;
+        transform:translateX(-50%);
+    }
+}

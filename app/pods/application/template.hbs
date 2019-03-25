@@ -1,5 +1,25 @@
-{{outlet "header"}}
-<div class="main-content container">
-    {{outlet}}
-</div>
-{{outlet "footer"}}
+<nav class="navbar navbar-spark navbar-toggleable navbar-expand-md sticky-top">
+    <div class="container-fluid">
+        <Link-to @params={{array "dashboard"}} @class="navbar-brand d-none d-md-inline-block d-lg-inline-block">
+            <img class="navbar-logo img-fluid" src="/images/logo.png" alt={{t "header.logoAlt"}}>
+        </Link-to>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item dropdown d-none d-md-inline-block d-lg-inline-block">
+                {{#dropdown-menu horizontalPosition="right" tagName="a" class="nav-link" renderInPlace=false as |dd|}}
+                    {{#dd.trigger class="dropdown-toggle" tagName="span"}}
+                        {{fa-icon "user-circle" size="lg"}}
+                        <span class="ml-2">
+                            {{session.user.fullName}}
+                        </span>
+                    {{/dd.trigger}}
+                    {{#dd.content}}
+                        {{#dropdown-action dd=dd action=(action "logout")}}
+                            {{fa-icon "power-off"}}
+                            {{t "header.logout"}}
+                        {{/dropdown-action}}
+                    {{/dd.content}}
+                {{/dropdown-menu}}
+            </li>
+        </ul>
+    </div>
+</nav>

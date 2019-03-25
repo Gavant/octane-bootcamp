@@ -26,11 +26,23 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-    RESTAPI: null
+    RESTAPI: null,
+    'ember-simple-auth': {
+        authenticationRoute: 'login',
+        routeIfAlreadyAuthenticated: 'dashboard',
+        routeAfterAuthentication: 'dashboard'
+    },
+    fontawesome: {
+        defaultPrefix: 'fal',
+        icons: {
+            'pro-light-svg-icons': 'all'
+        }
+    }
   };
 
   if (environment === 'development') {
-      ENV.RESTAPI = 'http://wwwd-levrx.gavant.com:8080';
+      ENV.RESTAPIBASEURL = 'https://www-glasses-master.gavant.com';
+         ENV.RESTAPI = `${ENV.RESTAPIBASEURL}/api`;
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -53,6 +65,10 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+
+  ENV['simple-auth-oauth2'] = {
+        serverTokenEndpoint: `${ENV.RESTAPIBASEURL}/oauth/token`
+    };
 
   return ENV;
 };

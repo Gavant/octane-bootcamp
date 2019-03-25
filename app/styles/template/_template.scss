@@ -1,0 +1,38 @@
+//Mixins & tools
+@import "tools/buttons";
+@import "tools/headings";
+@import "tools/opacity";
+@import "tools/responsive";
+@import "tools/shadows";
+@import "tools/transforms";
+@import "tools/transitions";
+
+// Bootstrap overrules & classes that can be used global (tables, forms etc)
+@import "fundamentals/backgrounds";
+@import "fundamentals/badges";
+@import "fundamentals/buttons";
+@import "fundamentals/cards";
+@import "fundamentals/charts";
+@import "fundamentals/colors";
+@import "fundamentals/forms";
+@import "fundamentals/global";
+@import "fundamentals/grid";
+@import "fundamentals/images";
+@import "fundamentals/margin";
+@import "fundamentals/nav";
+@import "fundamentals/padding";
+@import "fundamentals/progressbars";
+@import "fundamentals/tables";
+@import "fundamentals/typography";
+
+// Layout styles that are used on every page (header, footer etc)
+@import "layout/footer";
+@import "layout/header";
+@import "layout/splash";
+@import "layout/navbar";
+@import "layout/page";
+@import "layout/sidebar";
+
+//This layer contains specific component styles
+@import "components/widgets.scss";
+@import "components/error-code.scss";

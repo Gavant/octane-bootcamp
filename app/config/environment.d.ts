@@ -14,4 +14,8 @@ declare const config: {
   locationType: string;
   rootURL: string;
   RESTAPI: string;
+  RESTAPIBASEURL: string;
+  'simple-auth-oauth2': object;
+  'ember-simple-auth': object;
+  fontawesome: object;
 };

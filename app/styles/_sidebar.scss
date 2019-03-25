@@ -1,0 +1,24 @@
+.page-sidebar {
+    .sticky-element--sticky {
+        .sidebar-collapse .fa {
+            color: $color-default;
+        }
+    }
+    .nav-pills {
+        padding: 25px 0;
+        .nav-item {
+            &.active {
+                .nav-link {
+                    color: $color-primary;
+                    font-weight: bold;
+                    .text-muted {
+                        color: $sidebar-link-color !important;
+                    }
+                }
+            }
+            .nav-link {
+                background-color: inherit;
+            }
+        }
+    }
+}

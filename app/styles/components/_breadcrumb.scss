@@ -1,0 +1,11 @@
+.breadcrumb {
+    margin-left: -10px;
+    background-color: inherit;
+    &-item {
+        a {
+            color: #FFF;
+            padding-bottom: 1px;
+            text-decoration: underline;
+        }
+    }
+}

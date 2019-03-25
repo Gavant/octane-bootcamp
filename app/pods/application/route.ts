@@ -4,8 +4,9 @@ import Intl from 'ember-intl/services/intl';
 import CurrentUser from '../current-user/service';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
+import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
 
-export default class ApplicationRoute extends Route {
+export default class ApplicationRoute extends Route.extend(ApplicationRouteMixin, {}) {
     @service session!: Session;
     @service currentUser!: CurrentUser;
     @service intl!: Intl;

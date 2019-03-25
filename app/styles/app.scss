@@ -1,4 +1,25 @@
+@charset "UTF-8";
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 
-@import "gavant-ember-validations";
+//Our custom variables
+@import "variables";
 
-@import "gavant-ember-button-spinner";
+//Vendors
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "template/template";
+
+//Custom styles
+@import "mixins";
+@import "base";
+@import "components";
+@import "navbar";
+@import "sidebar";
+@import "header";
+@import "pages";
+@import "animations";
+@import "tables";
+@import "buttons";
+@import "modals";
+@import "page-title";
+@import "utilities";

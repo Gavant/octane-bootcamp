@@ -1,0 +1,22 @@
+.pagination {
+    .page-item {
+        a,
+        span {
+            color: $color-default;
+        }
+        &.active {
+            a,
+            span,
+            a:hover,
+            span:hover,
+            a:focus,
+            span:focus {
+                z-index: 3;
+                color: $color-default;
+                cursor: default;
+                background-color: $color-primary;
+                border-color: $color-primary;
+            }
+        }
+    }
+}

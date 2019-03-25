@@ -7,6 +7,7 @@ import { inject as service } from '@ember/service';
 interface changeset {
     emailAddress: string,
     password: string
+    get(property: string): string;
 }
 
 export default class Login extends Controller {
@@ -14,8 +15,8 @@ export default class Login extends Controller {
 
     @action
     async authenticate(changeset: changeset) {
-        const identification = changeset.emailAddress;
-        const password = changeset.password;
+        const identification = changeset.get('emailAddress');
+        const password = changeset.get('password');
         const authenticator = 'authenticator:oauth2';
         const scope = 'read write';
 

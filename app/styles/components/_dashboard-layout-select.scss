@@ -1,0 +1,31 @@
+.dashboard-layout-selection {
+    .ember-basic-dropdown-trigger {
+        background-color: $color-default;
+        border: none;
+        .box {
+            background-color: $blue !important;
+        }
+    }
+}
+
+.dashboard-layout-select-content {
+    @include basic-dropdown-animation;
+    background-color:$blue;
+    width: 320px;
+    padding: 10px;
+    .layout-icon-selectable {
+        width: 75px;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover,
+        &.selected {
+            background-color: $yellow;
+            .box {
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+}

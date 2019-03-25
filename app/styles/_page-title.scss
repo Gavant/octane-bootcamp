@@ -1,0 +1,24 @@
+.page-title-wrapper {
+    .selected-accounts-dropdown {
+        color: #FFF;
+        font-size: 1.2rem;
+        position: relative;
+        margin-left: 10px;
+        .ember-basic-dropdown-trigger {
+            cursor: pointer;
+            .badge {
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translate(90%, -50%);
+                background-color: $color-primary;
+            }
+        }
+    }
+}
+
+.selected-accounts-dropdown-content {
+    .fa {
+        width: 50px;
+    }
+}

@@ -1,0 +1,50 @@
+.input-validator {
+    position: relative;
+    &-error {
+        position: absolute;
+    }
+    &.is-invalid {
+        .input-validator-error {
+            position: absolute;
+            z-index: 9;
+            background-color: $color-danger;
+            top: 100%;
+            padding: 3px 12px;
+            border: 1px solid $white;
+            border-radius: 2px;
+            background-size: 20px 20px!important;
+            width: 100%;
+            .invalid-feedback {
+                color: $white;
+            }
+            &:before,
+            &:after {
+                position: absolute;
+                content: "";
+                border: none;
+                border-color: $color-danger;
+                border-right-style: solid;
+                border-right-color: transparent;
+                border-bottom-style: solid;
+                border-left-style: solid;
+                border-left-color: transparent;
+                background-color: white;
+            }
+            &:before {
+                top: -7px;
+                left: 12px;
+                border-right-width: 7px;
+                border-bottom-width: 7px;
+                border-bottom-color: inherit;
+                border-left-width: 7px;
+            }
+            &:after {
+                top: -6px;
+                left: 13px;
+                border-right-width: 6px;
+                border-bottom-width: 6px;
+                border-left-width: 6px;
+            }
+        }
+    }
+}

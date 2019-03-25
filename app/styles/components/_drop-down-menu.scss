@@ -1,0 +1,22 @@
+.ember-basic-dropdown-content {
+    z-index: 99999;
+}
+.dropdown-item {
+    &:active,
+    &.active {
+        background-color: #FFF;
+        color: $color-primary !important;
+    }
+    &:hover,
+    &:focus {
+        color: $color-primary !important;
+        text-decoration: none;
+        background-color: #FFF;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}

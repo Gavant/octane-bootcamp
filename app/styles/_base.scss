@@ -1,0 +1,41 @@
+html {
+    min-height: 100vh;
+    body {
+        font-size: 0.8rem;
+        min-height: 100vh;
+        .dropdown-menu {
+            display: inherit;
+        }
+        .page-content {
+            transition: all 0.5s;
+            &.full-width {
+                padding: initial;
+                margin: 0 auto;
+                margin-top: -56px;
+            }
+
+            input:focus, textarea:focus {
+                outline:none;
+                box-shadow: 0 0 5px $color-primary;
+              // border: 1px solid rgba(81, 203, 238, 1);
+            }
+            input:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 30px white inset;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            .page-content {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+* {
+    outline: 0 solid transparent;
+}

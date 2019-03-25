@@ -1,0 +1,143 @@
+.accounts {
+    &-list {
+        height: 500px;
+        overflow: auto;
+        position: absolute;
+        width: 100%;
+        left: 0;
+    }
+    .static-information {
+        font-size: 1.2rem;
+        max-width: 15%;
+        li {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            label {
+                font-size: .75rem;
+                width: 60px;
+            }
+        }
+
+    }
+    &-edit,
+    &-new {
+        .quote-search-group {
+            .quote-search {
+                width: 60%;
+            }
+            .input-group-append .btn {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            .input-validator-error {
+                width: 75%;
+            }
+        }
+        .finance-tab {
+            h5 {
+                padding-top: 1rem;
+                height: 50px;
+            }
+            font-size: .7rem !important;
+            cursor: default;
+            .ember-power-select-clear-btn,
+            .ember-power-select-status-icon {
+                display: none;
+            }
+            label,
+            .ember-basic-dropdown-trigger,
+            .form-control {
+                font-size: .7rem !important;
+            }
+            .form-group {
+                margin-bottom: .3rem;
+            }
+            .date-picker-calendar {
+                min-width: 300px;
+            }
+            .policies {
+                background-color: $gray-100;
+                .account-policy  {
+                    $account-policy-font-color: #212529;
+                    border-top: 1px solid $gray-200;
+                    .ember-power-select-placeholder {
+                        color: $account-policy-font-color;
+                    }
+                    .ember-power-select-trigger,
+                    input {
+                        background-color: $gray-100 !important;
+                    }
+                    input::placeholder {
+                        color: $account-policy-font-color !important;
+                    }
+                }
+            }
+
+            .text-field.inline-edit {
+                border: none;
+                box-shadow: none !important;
+                border-radius: 0;
+                padding-right: 0;
+                height: 1rem;
+                position: relative;
+                justify-content: flex-end !important;
+                text-align: right;
+                font-size: .7rem;
+                text-decoration: underline dotted;
+            }
+        }
+        .remove-policy {
+            top: 5px;
+            right: 5px;
+            z-index: 99
+        }
+        .calculations {
+            .input-validator-error {
+                top: 120% !important;
+                &:before {
+                    left: inherit !important;
+                    right: 12px;
+                }
+                &:after {
+                    left: inherit !important;
+                    right: 13px;
+                }
+            }
+        }
+    }
+
+    .data-table {
+        overflow: auto;
+
+        .selectable-row.selected {
+            background-color: #EFEFEF;
+        }
+    }
+
+    .page-sidebar {
+        .saved-searches {
+            &-search {
+                &:last-child {
+                    border-bottom: none !important;
+                }
+
+                .nav-link {
+                    cursor: pointer;
+                    text-decoration: underline;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        i.fa {
+            font-size: 1rem;
+            vertical-align: -2px;
+            text-align: center;
+            width: 1rem;
+            cursor: pointer;
+        }
+    }
+}

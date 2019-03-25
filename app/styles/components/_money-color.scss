@@ -1,0 +1,8 @@
+.money-color {
+    &.positive {
+        color: $color-money-positive;
+    }
+    &.negative {
+        color: $color-money-negative;
+    }
+}

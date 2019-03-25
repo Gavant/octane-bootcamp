@@ -1,0 +1,18 @@
+.fade {
+    &-enter {
+        opacity: 0.01;
+        animation-duration: 0.3s;
+        animation-fill-mode: both;
+        &-active {
+            animation-name: fadeIn;
+        }
+    }
+    &-leave {
+        opacity: 1;
+        animation-duration: 0.3s;
+        animation-fill-mode: both;
+        &-active {
+            animation-name: fadeOut;
+        }
+    }
+}

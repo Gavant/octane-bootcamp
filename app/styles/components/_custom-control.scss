@@ -1,0 +1,63 @@
+.custom-control {
+    &-label {
+	    position: unset;
+        &:after,
+        &:before {
+		    left: 0;
+	    }
+    }
+}
+
+
+.custom-control-input {
+	.custom-control-label {
+		line-height: $custom-control-indicator-size;
+	}
+    ~ .custom-control-label::before {
+        border-color: $primary;
+    }
+    &:disabled {
+        ~ .custom-control-label::before {
+            border-color: rgba($primary, $disabled-opacity) !important;
+        }
+        ~ .custom-control-label::after {
+            color: rgba($primary, $disabled-opacity) !important;
+        }
+    }
+    ~ .custom-control-label::after {
+    	color: $primary;
+    }
+}
+
+// Sizing
+.custom-control-sm {
+	min-width: 1rem;
+	min-height: 1rem;
+
+	&.custom-control {
+		top: 2px;
+	}
+
+	.custom-control-input {
+
+		~ .custom-control-label {
+
+			&::before {
+				width: 1rem;
+				height: 1rem;
+			}
+		}
+
+		&:checked ~ .custom-control-label {
+
+			&::after {
+				width: 1rem;
+				height: 1rem;
+				font-size: 1rem;
+				right: 0;
+				line-height: 1rem;
+				vertical-align: top;
+			}
+		}
+	}
+}

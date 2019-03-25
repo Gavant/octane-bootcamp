@@ -1,0 +1,95 @@
+//inspired by:
+//https://material.io/guidelines/components/progress-activity.html#progress-activity-types-of-indicators
+//https://codepen.io/holdencreative/pen/vEVbwv?editors=1100
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $progress-bar-height;
+    background: desaturate(rgba($progress-bar-color, 0.4), 10%);
+    transition: opacity 0.2s;
+    background-clip: padding-box;
+    overflow: hidden;
+    will-change: opacity;
+
+    .inner {
+        background-color: $progress-bar-color;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            will-change: left, right;
+            animation: indeterminateProgressBar $progress-bar-duration cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            will-change: left, right;
+            animation: indeterminateProgressBarShort $progress-bar-duration cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+            animation-delay: $progress-bar-delay;
+        }
+    }
+
+    &.app-progress-bar {
+        position: fixed;
+        z-index: $zindex-fixed + 1;
+    }
+
+    &.light {
+        background: rgba(#fff, 0.3);
+
+        .inner {
+            background-color: darken($progress-bar-color, 5%);
+        }
+    }
+
+    &.app-progress-bar {
+        opacity: 1;
+    }
+
+    .card > & {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+}
+
+@keyframes indeterminateProgressBar {
+    0% {
+        left: -35%;
+        right:100%;
+    }
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+@keyframes indeterminateProgressBarShort {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+    100% {
+        left: 107%;
+        right: -8%;
+    }
+}

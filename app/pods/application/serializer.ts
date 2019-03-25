@@ -6,19 +6,6 @@ interface serializeOptions {
 }
 
 export default class ApplicationSerializer extends RESTSerializer {
-    extractErrors(store: DS.Store, typeClass: any, payload: any) {
-        if(payload && typeof payload === 'object' && payload._problems) {
-            payload = payload._problems;
-            this.normalizeErrors(typeClass, payload);
-        }
-
-        return payload;
-    }
-
-    payloadKeyFromModelName() {
-        return 'data';
-    }
-
     serialize(snapshot: DS.Snapshot, options: serializeOptions) {
         if(!options) {
             options = {};
@@ -27,6 +14,10 @@ export default class ApplicationSerializer extends RESTSerializer {
         //include the record ID in the request body for PUTs, ect
         options.includeId = true;
         return this._super(snapshot, options);
+    }
+
+    serializeIntoHash(data: any, type: any, record: any, options: any) {
+        Object.assign(data, this.serialize(record, options));
     }
 }
 

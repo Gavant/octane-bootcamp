@@ -1,0 +1,37 @@
+.accounts-account {
+    &-information {
+        &-policies {
+            .lt-body {
+                tr:nth-child(2) {
+                    td, th {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+    .sticky-header {
+        top: 85px;
+    }
+
+    .page-sidebar {
+        .nav-pills {
+            padding: 0;
+            .nav-item {
+                &.active {
+                    background-color: $sidebar-link-background-color;
+                    .nav-link {
+                        color: #FFF;
+                        .text-muted {
+                            color: $sidebar-link-color !important;
+                        }
+                    }
+                }
+                .nav-link {
+                    background-color: inherit;
+                }
+            }
+        }
+    }
+
+}

@@ -4,6 +4,7 @@ import Ajax from '../ajax/service';
 import DS from 'ember-data';
 import { inject as service } from '@ember/service';
 import { reject } from 'rsvp';
+import Employee from '../employee/model';
 
 export default class CurrentUser extends Service {
     @service store!: DS.Store;
@@ -26,10 +27,10 @@ export default class CurrentUser extends Service {
 
     async fetchUser() {
         const response = await this.ajax.request('users/me');
-        const json = this.store.normalize('user', response.user);
-        const me = this.store.push(json);
+        const json = this.store.normalize('employee', response.employee);
+        const me = this.store.push(json) as Employee;
         this.user = me;
-        this.session.user.me = me;
+        this.session.user = { me };
         return me;
     }
 }

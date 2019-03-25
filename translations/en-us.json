@@ -11,6 +11,10 @@
         "select": "Select",
         "selected": "Selected"
     },
+    "header": {
+        "dashboard": "Dashboard",
+        "logout": "Log Out"
+    },
     "page": {
         "login": {
             "email": "Email Address",

@@ -1,0 +1,21 @@
+.inline-input {
+    label {
+        width: 100px;
+    }
+    .ember-basic-dropdown-trigger,
+    .ember-power-select-placeholder,
+    .ember-power-select-selected-item,
+    select,
+    input {
+        border: none;
+        box-shadow: none !important;
+        border-radius: 0;
+        height: 1rem;
+        line-height: 1rem;
+        position: relative;
+        justify-content: flex-start !important;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+}

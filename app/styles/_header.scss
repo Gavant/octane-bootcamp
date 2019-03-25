@@ -1,0 +1,15 @@
+.page-header {
+    padding: $page-header-padding;
+    .ember-power-select-trigger {
+        background-color: transparent;
+    }
+    .control-label {
+        background-color: transparent;
+        color: #FFF;
+        opacity: 0.6 !important;
+    }
+    .ember-power-select-status-icon {
+        border-color: #FFF transparent transparent transparent;
+        opacity: 0.6;
+    }
+}
