@@ -69,7 +69,7 @@
     "eslint-plugin-node": "^8.0.1",
     "gavant-ember-bootstrap-dropdown": "0.0.2",
     "gavant-ember-button-spinner": "0.0.11",
-    "gavant-ember-validations": "0.0.11",
+    "gavant-ember-validations": "https://github.com/Gavant/gavant-ember-validations.git#octane-upgrade",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.0",
     "sass": "^1.17.3",
