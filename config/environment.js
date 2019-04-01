@@ -37,7 +37,17 @@ module.exports = function(environment) {
         icons: {
             'pro-light-svg-icons': 'all'
         }
+    },
+    fastboot: {
+        htmlFile: environment === 'development' ? 'index.html' : 'index-configured.html',
+        hostWhitelist: [
+            /^wwwd-glasses.gavant.com:\d+$/,
+            /^test.premins.com/,
+            /^web-app$/,
+            /^localhost:\d+$/
+        ]
     }
+
   };
 
   if (environment === 'development') {

@@ -24,7 +24,7 @@ export default function unauthenticatedRoute<T extends ConcreteSubclass<Route>>(
     class UnauthenticatedRoute extends RouteSubclass {
         @service session!: Session;
 
-        _isFastBoot= isFastBoot();
+        _isFastBoot = isFastBoot();
 
         beforeModel() {
           const didRedirect = runIfAuthenticated(getOwner(this), () => {

@@ -8,7 +8,9 @@ export default config;
  * since different ember addons can materialize new entries.
  */
 interface EmberSimpleAuth {
-    routeIfAlreadyAuthenticated: string
+    routeIfAlreadyAuthenticated: string;
+    routeAfterAuthentication: string;
+    authenticationRoute: string;
 }
 declare const config: {
     environment: any;

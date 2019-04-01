@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
+import AuthenticatedRoute from 'octane-bootcamp/decorators/authenticated-route';
 
-export default class Dashboard extends Route.extend({
-  // anything which *must* be merged to prototype here
-}) {
+@AuthenticatedRoute
+export default class Dashboard extends Route {
   // normal class body definition here
 }
