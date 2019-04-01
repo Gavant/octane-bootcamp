@@ -1,8 +1,6 @@
 import { inject as service } from '@ember/service';
-import Mixin from '@ember/object/mixin';
 import { assert } from '@ember/debug';
 import { computed } from '@ember/object';
-import Configuration from './../configuration';
 import isFastBoot from 'ember-simple-auth/utils/is-fastboot';
 import { getOwner } from '@ember/application';
 import ENV from 'octane-bootcamp/config/environment';

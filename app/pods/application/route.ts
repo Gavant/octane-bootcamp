@@ -1,10 +1,10 @@
 import Route from '@ember/routing/route';
 import Intl from 'ember-intl/services/intl';
-import Session from 'ember-simple-auth/services/session';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
 import CurrentUser from '../current-user/service';
+import Session from 'ember-simple-auth/services/session';
 
 export default class ApplicationRoute extends Route.extend(ApplicationRouteMixin, {}) {
     @service session!: Session;
@@ -12,7 +12,8 @@ export default class ApplicationRoute extends Route.extend(ApplicationRouteMixin
     @service intl!: Intl;
 
     async beforeModel() {
-        this._super(...arguments);
+        super.beforeModel(...arguments);
+        // this._super(...arguments);
         if (this.session.isAuthenticated) {
             await this.currentUser.load()
         }
@@ -20,13 +21,8 @@ export default class ApplicationRoute extends Route.extend(ApplicationRouteMixin
     }
 
     async sessionAuthenticated() {
-        //workaround for gotcha of using this._super() after an `await`
-        //https://github.com/ember-cli/ember-cli/issues/6282
-        const _super = this._super;
-        const args = arguments;
-        //get the current user's model before transitioning from the login page
         const currentUser = await this.currentUser.load();
-        _super.apply(this, args);
+        super.sesssionAuthenticated(...arguments);
         return currentUser;
     }
 
@@ -52,5 +48,4 @@ export default class ApplicationRoute extends Route.extend(ApplicationRouteMixin
     invalidateSession() {
         return this.session.invalidate();
     }
-
 }

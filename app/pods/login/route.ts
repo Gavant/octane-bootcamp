@@ -1,7 +1,5 @@
 import Route from '@ember/routing/route';
 import Validations from 'octane-bootcamp/validations/login';
-import UnauthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-route-mixin';
-
 import ChangesetRoute from 'gavant-ember-validations/decorators/changeset-route';
 import UnauthenticatedRoute from 'octane-bootcamp/decorators/unathenticated-route';
 

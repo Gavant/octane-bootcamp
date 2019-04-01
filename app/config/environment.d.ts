@@ -7,15 +7,18 @@ export default config;
  * For now these need to be managed by the developer
  * since different ember addons can materialize new entries.
  */
+interface EmberSimpleAuth {
+    routeIfAlreadyAuthenticated: string
+}
 declare const config: {
-  environment: any;
-  modulePrefix: string;
-  podModulePrefix: string;
-  locationType: string;
-  rootURL: string;
-  RESTAPI: string;
-  RESTAPIBASEURL: string;
-  'simple-auth-oauth2': object;
-  'ember-simple-auth': object;
-  fontawesome: object;
+    environment: any;
+    modulePrefix: string;
+    podModulePrefix: string;
+    locationType: string;
+    rootURL: string;
+    RESTAPI: string;
+    RESTAPIBASEURL: string;
+    'simple-auth-oauth2': object;
+    'ember-simple-auth': EmberSimpleAuth;
+    fontawesome: object;
 };
